@@ -13,7 +13,7 @@
         <h1><%= $BLOG_TITLE %> <small><%= $BLOG_DESC %></small></h1>
       </header>
       <% $posts.each do |post| %>
-        <% post = post as Hash %>
+        <% post = post.as_h %>
         <% if post["type"] == "post" %>
           <%= render "libs/kamber-theme-default/views/types/post.ecr" %>
         <% elsif post["type"] == "tweet" %>
